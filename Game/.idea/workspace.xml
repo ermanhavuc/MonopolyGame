@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8967cab4-eebd-41bb-9d61-51d9b3e88a4a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -78,8 +77,8 @@
       <file leaf-file-name="MonopolyGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MonopolyGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+            <state relative-caret-position="90">
+              <caret line="6" column="69" lean-forward="true" selection-start-line="6" selection-start-column="69" selection-end-line="6" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -294,7 +293,7 @@
       <updated>1509007552298</updated>
       <workItem from="1509007555476" duration="57000" />
       <workItem from="1509008376926" duration="59000" />
-      <workItem from="1509009760726" duration="2450000" />
+      <workItem from="1509009760726" duration="2701000" />
     </task>
     <task id="LOCAL-00001" summary="added some comments and fixed some bugs">
       <created>1509012444292</created>
@@ -303,11 +302,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509012444292</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added some comments and fixed some bugs">
+      <created>1509012535685</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1509012535685</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2977000" />
+    <option name="totallyTimeSpent" value="3228000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="20" width="1366" height="741" extended-state="6" />
@@ -682,8 +688,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MonopolyGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+        <state relative-caret-position="90">
+          <caret line="6" column="69" lean-forward="true" selection-start-line="6" selection-start-column="69" selection-end-line="6" selection-end-column="69" />
           <folding />
         </state>
       </provider>
