@@ -1,30 +1,29 @@
-import java.util.ArrayList;
-import java.util.List;
+public class Board {    //board object
 
-public class Board {
-    private static final int SIZE = 40;
-    private List<Square> squares;
+    private static final int SIZE = 40; //board has 40 squares
+    private Square squares[] = new Square[SIZE];
 
-    public Board() {
-        squares= new ArrayList<Square>(SIZE);
+    public Board() {    //board constructor
+
         buildSquares();
     }
 
-    public Square getSquare(Square start, int distance) {
-        int endIndex= (start.getIndex()+distance)%Board.SIZE;
-        return squares.get(endIndex);
+    public Square getSquare(Square start, int distance) {   //
+
+        int endIndex= (start.getIndex()+distance)%Board.SIZE;   //board has 40 squares, so pieces can not be moved to 40 and more
+        return squares[endIndex];
     }
 
-    public Square getStartSquare() {
+    public Square getStartSquare() {    //starting square - zero square
 
-        return squares.get(0);
+        return squares[0];
     }
 
     public void buildSquares() {
 
         for(int i=0;i<SIZE;i++){
             Square square= new Square( "Square "+i,i);
-            squares.add(square);
+            squares[i] = square;
         }
     }
 }

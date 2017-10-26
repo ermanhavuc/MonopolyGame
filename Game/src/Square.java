@@ -1,8 +1,10 @@
-public class Square {
+public class Square {   //square object
+
     private String name;
     private int index;
 
-    public Square(String name, int index) {
+    public Square(String name, int index) { //square constructor
+
         this.name=name;
         this.index=index;
     }
