@@ -1,3 +1,4 @@
+@SuppressWarnings("WeakerAccess")
 public class Die {
 
     private static final int MAX = 6;   //dice has 6 faces

@@ -1,3 +1,4 @@
+@SuppressWarnings("WeakerAccess")
 public class Piece {
 
     private Square location;

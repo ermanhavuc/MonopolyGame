@@ -1,35 +1,28 @@
+@SuppressWarnings("WeakerAccess")
 public class Player {   //player object
 
     private String name;
     private Piece piece;
-    private Board board;
-    private Die[] dice;
+    private int money = 200;
 
-    public Player(String name, Board board, Die[] dice, Piece piece) { //player constructor
+    public Player(String name, Piece piece) { //player constructor
 
         this.name = name;
-        this.board = board;
-        this.dice = dice;
         this.piece = piece;
     }
 
-    public Square getLocation() {
+    public Square getLocation() { return this.piece.getLocation(); }
 
-        return this.piece.getLocation();
-    }
+    public Piece getPiece() { return piece; }
 
-    public Piece getPiece() {
+    public String getName() { return name; }
 
-        return piece;
-    }
+    public String getPieceName() { return piece.getName(); }
 
-    public String getName() {
+    public int getMoney(){ return money; }
 
-        return name;
-    }
+    public void setMoney(int valueToChange) {
 
-    public String getPieceName() {
-
-        return piece.getName();
+        money += valueToChange;
     }
 }

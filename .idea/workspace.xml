@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8967cab4-eebd-41bb-9d61-51d9b3e88a4a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Board.class" afterPath="$PROJECT_DIR$/out/production/Game/Board.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Player.class" afterPath="$PROJECT_DIR$/out/production/Game/Player.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Square.class" afterPath="$PROJECT_DIR$/out/production/Game/Square.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Die.class" afterPath="$PROJECT_DIR$/out/production/Game/Die.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Main.class" afterPath="$PROJECT_DIR$/out/production/Game/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/MonopolyGame.class" afterPath="$PROJECT_DIR$/out/production/Game/MonopolyGame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Piece.class" afterPath="$PROJECT_DIR$/out/production/Game/Piece.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Board.java" afterPath="$PROJECT_DIR$/src/Board.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Die.java" afterPath="$PROJECT_DIR$/src/Die.java" />
@@ -319,7 +319,7 @@
       <workItem from="1509008376926" duration="59000" />
       <workItem from="1509009760726" duration="3087000" />
       <workItem from="1510433539092" duration="144000" />
-      <workItem from="1510433685567" duration="4251000" />
+      <workItem from="1510433685567" duration="4300000" />
     </task>
     <task id="LOCAL-00001" summary="added some comments and fixed some bugs">
       <created>1509012444292</created>
@@ -349,11 +349,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510440479576</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Usual changes">
+      <created>1510440518346</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1510440518346</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8009000" />
+    <option name="totallyTimeSpent" value="8058000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />

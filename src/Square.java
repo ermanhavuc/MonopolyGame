@@ -1,3 +1,4 @@
+@SuppressWarnings("WeakerAccess")
 public class Square {   //square object
 
     private String name;
