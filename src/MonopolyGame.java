@@ -4,7 +4,7 @@ public class MonopolyGame {
 
     private static final int RoundsNumber = 20;  //number of rounds
 
-    private Board board = new Board();  //create board object
+    private Board board = new Board();
 
     public MonopolyGame() {
 
@@ -12,7 +12,7 @@ public class MonopolyGame {
         playGame(buildPlayers());  //game starts
     }
 
-    private void playGame(Player[] players) {    //for each round, every player has a turn
+    private void playGame(Player[] players) {
 
         for (int i = 0; i < RoundsNumber; i++) {
             System.out.println("----Round "+(i+1)+"----\n");
@@ -42,7 +42,7 @@ public class MonopolyGame {
         System.out.println("Game finished !");
     }
 
-    private Player[] buildPlayers() {   //build players
+    private Player[] buildPlayers() {
 
         int numOfPlayers = 0;
 
@@ -52,17 +52,17 @@ public class MonopolyGame {
             numOfPlayers = new Scanner(System.in).nextInt();
         }
 
-        Player[] players = new Player[numOfPlayers]; //create player array
+        Player[] players = new Player[numOfPlayers];
 
         System.out.println("\nEnter names of Players: ");
 
-        for (int i = 0; i < numOfPlayers; i++) { //player objects created with names
+        for (int i = 0; i < numOfPlayers; i++) {
 
             String nameOfPlayer = new Scanner(System.in).nextLine();
             players[i] = new Player(nameOfPlayer, new Piece(board.getSquare(0),i));
         }
 
-        System.out.println("\nGame Starting...\n\n");   //game starting message
+        System.out.println("\nGame Starting...\n\n");
 
         return players;
     }

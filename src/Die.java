@@ -1,7 +1,7 @@
-@SuppressWarnings("WeakerAccess")
+
 public class Die {
 
-    private static final int MAX = 6;   //dice has 6 faces
+    private static final int MAX = 6;
     private int faceValue;
 
     public Die() {
@@ -11,7 +11,7 @@ public class Die {
 
     public void roll() {
 
-        faceValue=(int) ( (Math.random()*MAX) +1 ); //calculate face value randomly
+        faceValue=(int) ( (Math.random()*MAX) +1 );
     }
 
     public int getFaceValue() {
