@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class MonopolyGame {
 
-    private static final int RoundsNumber = 10;  //number of rounds
+    private static final int RoundsNumber = 20;  //number of rounds
 
     private Board board = new Board();  //create board object
 
@@ -15,31 +15,30 @@ public class MonopolyGame {
     private void playGame(Player[] players) {    //for each round, every player has a turn
 
         for (int i = 0; i < RoundsNumber; i++) {
-            System.out.println("----Round "+i+"----\n");
+            System.out.println("----Round "+(i+1)+"----\n");
 
             for (Player player : players) { //take turns in the round
-                System.out.println("- " + player.getName() + " (" + player.getOldMoney() + "$) is taking turn:\n");
-                System.out.println(player.getPiece().getName() + " is at " + player.getLocation().getIndex() + "\n");
+                System.out.println("- " + player.getName() + " (" + player.getMoney() + "$) is taking turn:\n");
+                System.out.println(player.getPiece().getName() + " is at " + player.getLocation().getIndex() + ": " +
+                        player.getLocation().getName() + "\n");
 
-                Square newLocation = board.calculateSquare(player.getLocation(),diceRollControl(player)[0]);   //roll
-                // dice and calculate new location
-                player.getPiece().setLocation(newLocation); //set new location
+                if (!player.isInJail()) {
 
-                controlGoSquare(player);
+                    player.getPiece().setLocation(board.calculateSquare(player.getLocation(),diceRollControl(player)[0]));
+                    //roll dice and calculate new location then set
 
-                System.out.println("\n" + player.getPiece().getName() + "'s new location is " +
-                        player.getLocation().getIndex()+": " + player.getLocation().getName());
+                    controlGoSquare(player);
+
+                    System.out.println("\n" + player.getPiece().getName() + "'s new location is " +
+                            player.getLocation().getIndex()+": " + player.getLocation().getName());
+                }
 
                 player.getLocation().Operation(player, board);
-
-                if (player.getOldMoney() != player.getMoney()) {
-
-                    System.out.println("\nNew money is " + player.getMoney() + "$");
-                }
 
                 System.out.println("\n\n");
             }
         }
+
         System.out.println("Game finished !");
     }
 
@@ -78,20 +77,24 @@ public class MonopolyGame {
         }
     }
 
-    private int[] diceRollControl(Player player) {
+    public int[] diceRollControl(Player player) {
 
         int doubleCount = 0;
-        int returnValues[];
+        int returnValues[] = {0};
 
         do {
+            if (doubleCount == 3) {
+                player.setLocation(board.getSquare(10));
+                player.setInJail(true);
+                System.out.println("Player " + player.getName() + " is now in jail !");
+                System.out.println("\n" + player.getPiece().getName() + "'s new location is " +
+                        player.getLocation().getIndex()+": " + player.getLocation().getName());
+                break;
+            }
+
             returnValues = board.rollDice();
             doubleCount++;
-        } while (returnValues[1] == returnValues[2] && doubleCount < 3);
-
-        if (doubleCount == 3) {
-            player.setLocation(board.getSquare(30));
-            player.setInJail(true);
-        }
+        } while (returnValues[1] == returnValues[2]);
 
         return returnValues;
 
