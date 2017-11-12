@@ -31,7 +31,7 @@ public class JailSquare extends Square{
 
             }
 
-            if (!player.isInJail()) {
+            if (!player.isInJail()) { // visit jail
 
                 player.getPiece().setLocation(board.calculateSquare(player.getLocation(),board.rollDice()[0]));
                 //roll dice and calculate new location then set
