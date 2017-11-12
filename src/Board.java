@@ -6,8 +6,8 @@ public class Board {
 
     public Board() {
 
-        buildSquares();
-        buildDice();
+        buildSquares(); //Build squares
+        buildDice(); //Build Dices
     }
 
     public Square calculateSquare(Square start, int distance) {
