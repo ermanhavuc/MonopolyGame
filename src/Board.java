@@ -1,22 +1,22 @@
-public class Board {    //board object
+public class Board {
 
-    private static final int SIZE = 40; //board has 40 squares
+    private static final int SIZE = 40;
     private Square squares[] = new Square[SIZE];
     private Die dice[] = new Die[2];
 
-    public Board() {    //board constructor
+    public Board() {
 
         buildSquares();
         buildDice();
     }
 
-    public Square calculateSquare(Square start, int distance) {   //
+    public Square calculateSquare(Square start, int distance) {
 
-        int endIndex= (start.getIndex()+distance)%Board.SIZE;   //board has 40 squares, so pieces can not be moved to 40 and more
+        int endIndex= (start.getIndex()+distance)%Board.SIZE;
         return squares[endIndex];
     }
 
-    public Square getSquare(int index) {    //starting square - zero square
+    public Square getSquare(int index) {
 
         return squares[index];
     }
@@ -60,7 +60,7 @@ public class Board {    //board object
 
     private  void buildDice() {
 
-        for (int i = 0; i < 2; i++) {  //create dice objects
+        for (int i = 0; i < 2; i++) {
             dice[i] = new Die();
         }
     }
@@ -71,7 +71,7 @@ public class Board {    //board object
 
         int rollTotal=0;
 
-        for(int j=0; j<dice.length; j++){   //roll die
+        for(int j=0; j<dice.length; j++){
 
             dice[j].roll();
             rollTotal += dice[j].getFaceValue();

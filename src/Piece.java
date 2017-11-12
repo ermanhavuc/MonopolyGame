@@ -4,7 +4,7 @@ public class Piece {
     private Square oldLocation;
     private String name;
 
-    public Piece(Square location,int nameNumber) {  //piece constructor
+    public Piece(Square location,int nameNumber) {
         this.location=location;
 
         String[] pieceNames = {"Dog", "RaceCar", "Shoe", "Hat", "Boot", "BattleShip", "Iron", "Horse"};

@@ -1,5 +1,5 @@
 @SuppressWarnings("WeakerAccess")
-public class Player {   //player object
+public class Player {
 
     private String name;
     private Piece piece;
@@ -7,7 +7,7 @@ public class Player {   //player object
     private int oldMoney = 200;
     private boolean inJail = false;
 
-    public Player(String name, Piece piece) { //player constructor
+    public Player(String name, Piece piece) {
 
         this.name = name;
         this.piece = piece;
