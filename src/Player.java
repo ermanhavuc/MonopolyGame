@@ -11,15 +11,25 @@ public class Player {   //player object
         this.piece = piece;
     }
 
-    public Square getLocation() { return this.piece.getLocation(); }
+    public Square getLocation() {
 
-    public Piece getPiece() { return piece; }
+        return this.piece.getLocation();
+    }
 
-    public String getName() { return name; }
+    public Piece getPiece() {
 
-    public String getPieceName() { return piece.getName(); }
+        return piece;
+    }
 
-    public int getMoney(){ return money; }
+    public String getName() {
+
+        return name;
+    }
+
+    public int getMoney(){
+
+        return money;
+    }
 
     public void setMoney(int valueToChange) {
 

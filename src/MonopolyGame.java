@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-@SuppressWarnings("WeakerAccess")
 public class MonopolyGame {
 
         private static final int RoundsNumber = 5;  //number of rounds
@@ -16,18 +15,30 @@ public class MonopolyGame {
     private void playGame(Player[] players) {    //for each round, every player has a turn
 
         for (int i = 0; i < RoundsNumber; i++) {
+
             System.out.println("----Round "+i+"----\n");
 
             for (Player player : players) { //take turns in the round
 
-                System.out.println("- " + player.getName() + " is taking a turn: \n");
-                System.out.println(player.getPieceName() + " is at " + player.getLocation().getIndex() + "\n");
-                System.out.println("Rolling dice...");
+                int oldMoney = player.getMoney();
+
+                System.out.println("- " + player.getName() + " (" + oldMoney + "$) is taking turn:\n");
+                System.out.println(player.getPiece().getName() + " is at " + player.getLocation().getIndex() + "\n");
 
                 Square newLocation = board.getSquare(player.getLocation(),board.rollDice());   //roll dice and calculate new location
                 player.getPiece().setLocation(newLocation); //set new location
 
-                System.out.println("\n" + player.getName() + "'s new location is " + player.getLocation().getIndex()+"\n\n");
+                System.out.println("\n" + player.getPiece().getName() + "'s new location is " +
+                        player.getLocation().getIndex()+": " + player.getLocation().getName());
+
+                player.getLocation().Operation(player);
+
+                if (oldMoney != player.getMoney()) {
+
+                    System.out.println("\nNew money is " + player.getMoney() + "$");
+                }
+
+                System.out.println("\n\n");
             }
         }
         System.out.println("Game finished !");
@@ -48,6 +59,7 @@ public class MonopolyGame {
         System.out.println("\nEnter names of Players: ");
 
         for (int i = 0; i < numOfPlayers; i++) { //player objects created with names
+
             String nameOfPlayer = new Scanner(System.in).nextLine();
             players[i] = new Player(nameOfPlayer, new Piece(board.getStartSquare(),i));
         }

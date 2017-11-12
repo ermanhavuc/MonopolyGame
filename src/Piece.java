@@ -2,7 +2,7 @@
 public class Piece {
 
     private Square location;
-    private String name;
+    public String name;
 
     public Piece(Square location,int nameNumber) {  //piece constructor
 
