@@ -28,6 +28,10 @@ public class Board {    //board object
 
             switch (i) {
 
+                case 0:
+                    squares[i] = new GoSquare("Go Square",i);
+                    break;
+
                 case 4:
                     squares[i] = new IncomeTaxSquare("Income Tax Square",i);
                     break;

@@ -10,6 +10,6 @@ public class IncomeTaxSquare extends Square {
 
         int tax = player.getMoney()/10;
         player.setMoney(-tax);
-        System.out.println("Paid "+ tax +" $ to the Bank");
+        System.out.println("Paid "+ tax +"$ to Bank");
     }
 }

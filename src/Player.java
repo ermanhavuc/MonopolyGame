@@ -4,6 +4,7 @@ public class Player {   //player object
     private String name;
     private Piece piece;
     private int money = 200;
+    private int oldMoney = 200;
 
     public Player(String name, Piece piece) { //player constructor
 
@@ -14,6 +15,11 @@ public class Player {   //player object
     public Square getLocation() {
 
         return this.piece.getLocation();
+    }
+
+    public Square getOldLocation() {
+
+        return this.piece.getOldLocation();
     }
 
     public Piece getPiece() {
@@ -33,6 +39,12 @@ public class Player {   //player object
 
     public void setMoney(int valueToChange) {
 
+        oldMoney = money;
         money += valueToChange;
+    }
+
+    public int getOldMoney() {
+
+        return oldMoney;
     }
 }

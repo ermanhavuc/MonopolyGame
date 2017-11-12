@@ -8,7 +8,7 @@ public class LuxuryTaxSquare extends Square {
     @Override
     public void Operation(Player player) {
 
-        System.out.println("Paid 75$ to the Bank.. ");
         player.setMoney(-75);
+        System.out.println("Paid 75$ to Bank.. ");
     }
 }
