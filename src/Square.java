@@ -1,14 +1,14 @@
-@SuppressWarnings("WeakerAccess")
-public class Square {   //square object
+public abstract class Square {
 
     private String name;
     private int index;
 
-    public Square(String name, int index) { //square constructor
+    public Square(String name, int index) {
 
         this.name=name;
         this.index=index;
     }
+
 
     public String getName() {
 
@@ -19,4 +19,6 @@ public class Square {   //square object
 
         return index;
     }
+
+    public abstract void Operation(Player player);
 }
