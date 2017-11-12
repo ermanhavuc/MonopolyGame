@@ -3,7 +3,6 @@ public class Player {   //player object
     private String name;
     private Piece piece;
     private int money = 200;
-    private int oldMoney = 200;
     private boolean inJail = false;
     private int failJailRolls = 0;
 
@@ -13,15 +12,15 @@ public class Player {   //player object
     }
 
     public Square getLocation() {
-        return this.piece.getLocation();
+        return piece.getLocation();
     }
 
     public void setLocation(Square square) {
-        this.piece.setLocation(square);
+        piece.setLocation(square);
     }
 
     public Square getOldLocation() {
-        return this.piece.getOldLocation();
+        return piece.getOldLocation();
     }
 
     public Piece getPiece() {
@@ -37,12 +36,8 @@ public class Player {   //player object
     }
 
     public void setMoney(int valueToChange) {
-        oldMoney = money;
-        money += valueToChange;
-    }
 
-    public int getOldMoney() {
-        return oldMoney;
+        money += valueToChange;
     }
 
     public void setInJail(boolean inJail) {
@@ -59,5 +54,10 @@ public class Player {   //player object
 
     public void setFailJailRolls(int failJailRolls) {
         this.failJailRolls = failJailRolls;
+    }
+
+    public boolean getBankruptcyStat() {
+
+        return money <= 0;
     }
 }

@@ -20,6 +20,8 @@ public class JailSquare extends Square{
                     player.setInJail(false);
                     player.setFailJailRolls(0);
 
+                } else {
+                    System.out.println("\nWaiting next turn...");
                 }
             } else {
                 System.out.println("Time to leave Jail !\nPaid 50$ to Bank\n");

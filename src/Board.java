@@ -12,7 +12,7 @@ public class Board {
 
     public Square calculateSquare(Square start, int distance) {
 
-        int endIndex= (start.getIndex()+distance)%Board.SIZE;
+        int endIndex = (start.getIndex()+distance)%Board.SIZE;
         return squares[endIndex];
     }
 
@@ -21,9 +21,9 @@ public class Board {
         return squares[index];
     }
 
-    public void buildSquares() {
+    private void buildSquares() {
 
-        for(int i=0;i<SIZE;i++){
+        for(int i=0;i<SIZE;i++) {
 
             switch (i) {
 

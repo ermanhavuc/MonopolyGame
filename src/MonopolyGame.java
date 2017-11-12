@@ -18,24 +18,27 @@ public class MonopolyGame {
             System.out.println("----Round "+(i+1)+"----\n");
 
             for (Player player : players) { //take turns in the round
-                System.out.println("- " + player.getName() + " (" + player.getMoney() + "$) is taking turn:\n");
-                System.out.println(player.getPiece().getName() + " is at " + player.getLocation().getIndex() + ": " +
-                        player.getLocation().getName() + "\n");
+                if (!player.getBankruptcyStat()) {
 
-                if (!player.isInJail()) {
+                    System.out.println("- " + player.getName() + " (" + player.getMoney() + "$) is taking turn:\n");
+                    System.out.println(player.getPiece().getName() + " is at " + player.getLocation().getIndex() + ": " +
+                            player.getLocation().getName() + "\n");
 
-                    player.getPiece().setLocation(board.calculateSquare(player.getLocation(),diceRollControl(player)[0]));
-                    //roll dice and calculate new location then set
+                    if (!player.isInJail()) {
 
-                    controlGoSquare(player);
+                        player.getPiece().setLocation(board.calculateSquare(player.getLocation(),diceRollControl(player)[0]));
+                        //roll dice and calculate new location then set
 
-                    System.out.println("\n" + player.getPiece().getName() + "'s new location is " +
-                            player.getLocation().getIndex()+": " + player.getLocation().getName());
+                        controlGoSquare(player);
+
+                        System.out.println("\n" + player.getPiece().getName() + "'s new location is " +
+                                player.getLocation().getIndex()+": " + player.getLocation().getName());
+                    }
+
+                    player.getLocation().Operation(player, board);
+
+                    System.out.println("\n\n");
                 }
-
-                player.getLocation().Operation(player, board);
-
-                System.out.println("\n\n");
             }
         }
 
@@ -77,7 +80,7 @@ public class MonopolyGame {
         }
     }
 
-    public int[] diceRollControl(Player player) {
+    private int[] diceRollControl(Player player) {
 
         int doubleCount = 0;
         int returnValues[] = {0};
@@ -99,5 +102,4 @@ public class MonopolyGame {
         return returnValues;
 
     }
-
 }
