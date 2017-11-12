@@ -6,7 +6,7 @@ public class GoSquare extends Square {
     }
 
     @Override
-    public void Operation(Player player) {
+    public void Operation(Player player, Board board) {
 
         player.setMoney(200);
         System.out.println("200$ received from Bank");

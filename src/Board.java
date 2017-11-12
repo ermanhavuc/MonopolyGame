@@ -1,4 +1,3 @@
-@SuppressWarnings("WeakerAccess")
 public class Board {    //board object
 
     private static final int SIZE = 40; //board has 40 squares
@@ -11,15 +10,15 @@ public class Board {    //board object
         buildDice();
     }
 
-    public Square getSquare(Square start, int distance) {   //
+    public Square calculateSquare(Square start, int distance) {   //
 
         int endIndex= (start.getIndex()+distance)%Board.SIZE;   //board has 40 squares, so pieces can not be moved to 40 and more
         return squares[endIndex];
     }
 
-    public Square getStartSquare() {    //starting square - zero square
+    public Square getSquare(int index) {    //starting square - zero square
 
-        return squares[0];
+        return squares[index];
     }
 
     public void buildSquares() {
@@ -36,8 +35,16 @@ public class Board {    //board object
                     squares[i] = new IncomeTaxSquare("Income Tax Square",i);
                     break;
 
+                case 10:
+                    squares[i] = new JailSquare("Jail Square",i);
+                    break;
+
                 case 20:
                     squares[i] = new FreeParkingSquare("Free Parking Square",i);
+                    break;
+
+                case 30:
+                    squares[i] = new GoToJailSquare("Go to Jail Square",i);
                     break;
 
                 case 38:
@@ -51,14 +58,14 @@ public class Board {    //board object
         }
     }
 
-    public  void buildDice() {
+    private  void buildDice() {
 
         for (int i = 0; i < 2; i++) {  //create dice objects
             dice[i] = new Die();
         }
     }
 
-    int rollDice() {
+    public int[] rollDice() {
 
         System.out.println("Rolling dice...");
 
@@ -74,6 +81,11 @@ public class Board {    //board object
 
         System.out.println("Total: " + rollTotal);
 
-        return rollTotal;
+        int returnValues[] = new int[3];
+        returnValues[0] = rollTotal;
+        returnValues[1] = dice[0].getFaceValue();
+        returnValues[2] = dice[1].getFaceValue();
+
+        return returnValues;
     }
 }

@@ -5,6 +5,7 @@ public class Player {   //player object
     private Piece piece;
     private int money = 200;
     private int oldMoney = 200;
+    private boolean inJail = false;
 
     public Player(String name, Piece piece) { //player constructor
 
@@ -15,6 +16,11 @@ public class Player {   //player object
     public Square getLocation() {
 
         return this.piece.getLocation();
+    }
+
+    public void setLocation(Square square) {
+
+        this.piece.setLocation(square);
     }
 
     public Square getOldLocation() {
@@ -46,5 +52,15 @@ public class Player {   //player object
     public int getOldMoney() {
 
         return oldMoney;
+    }
+
+    public void setInJail(boolean inJail) {
+
+        this.inJail = inJail;
+    }
+
+    public boolean getInJail() {
+
+        return inJail;
     }
 }

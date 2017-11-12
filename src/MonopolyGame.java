@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class MonopolyGame {
 
-    private static final int RoundsNumber = 5;  //number of rounds
+    private static final int RoundsNumber = 10;  //number of rounds
 
     private Board board = new Board();  //create board object
 
@@ -21,7 +21,8 @@ public class MonopolyGame {
                 System.out.println("- " + player.getName() + " (" + player.getOldMoney() + "$) is taking turn:\n");
                 System.out.println(player.getPiece().getName() + " is at " + player.getLocation().getIndex() + "\n");
 
-                Square newLocation = board.getSquare(player.getLocation(),board.rollDice());   //roll dice and calculate new location
+                Square newLocation = board.calculateSquare(player.getLocation(),diceRollControl(player)[0]);   //roll
+                // dice and calculate new location
                 player.getPiece().setLocation(newLocation); //set new location
 
                 controlGoSquare(player);
@@ -29,7 +30,7 @@ public class MonopolyGame {
                 System.out.println("\n" + player.getPiece().getName() + "'s new location is " +
                         player.getLocation().getIndex()+": " + player.getLocation().getName());
 
-                player.getLocation().Operation(player);
+                player.getLocation().Operation(player, board);
 
                 if (player.getOldMoney() != player.getMoney()) {
 
@@ -59,7 +60,7 @@ public class MonopolyGame {
         for (int i = 0; i < numOfPlayers; i++) { //player objects created with names
 
             String nameOfPlayer = new Scanner(System.in).nextLine();
-            players[i] = new Player(nameOfPlayer, new Piece(board.getStartSquare(),i));
+            players[i] = new Player(nameOfPlayer, new Piece(board.getSquare(0),i));
         }
 
         System.out.println("\nGame Starting...\n\n");   //game starting message
@@ -69,11 +70,31 @@ public class MonopolyGame {
 
     private void controlGoSquare(Player player) {
 
-        if (player.getOldLocation().getIndex() - player.getLocation().getIndex() > 0) {
+        if (player.getOldLocation().getIndex() - player.getLocation().getIndex() > 0 &&
+                player.getLocation().getIndex() != 30) {
 
             player.setMoney(200);
             System.out.println("Player passed Go Square, 200$ received from Bank");
         }
+    }
+
+    private int[] diceRollControl(Player player) {
+
+        int doubleCount = 0;
+        int returnValues[];
+
+        do {
+            returnValues = board.rollDice();
+            doubleCount++;
+        } while (returnValues[1] == returnValues[2] && doubleCount < 3);
+
+        if (doubleCount == 3) {
+            player.setLocation(board.getSquare(30));
+            player.setInJail(true);
+        }
+
+        return returnValues;
+
     }
 
 }

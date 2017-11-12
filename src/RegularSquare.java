@@ -6,7 +6,7 @@ public class RegularSquare extends Square { // this class for normal squares Squ
     }
 
     @Override
-    public void Operation(Player player) {
+    public void Operation(Player player, Board board) {
 
         //empty
     }

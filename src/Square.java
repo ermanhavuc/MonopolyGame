@@ -20,5 +20,5 @@ public abstract class Square {
         return index;
     }
 
-    public abstract void Operation(Player player);
+    public abstract void Operation(Player player, Board board);
 }

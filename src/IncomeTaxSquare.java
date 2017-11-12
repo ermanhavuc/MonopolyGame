@@ -6,7 +6,7 @@ public class IncomeTaxSquare extends Square {
     }
 
     @Override
-    public void Operation(Player player) {
+    public void Operation(Player player, Board board) {
 
         int tax = player.getMoney()/10;
         player.setMoney(-tax);

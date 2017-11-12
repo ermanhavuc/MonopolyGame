@@ -5,7 +5,7 @@ public class FreeParkingSquare extends Square {
     }
 
     @Override
-    public void Operation(Player player) {
+    public void Operation(Player player, Board board) {
         System.out.println("Waiting next turn...");
     }
 }

@@ -10,6 +10,7 @@ public class Die {
     }
 
     public void roll() {
+
         faceValue=(int) ( (Math.random()*MAX) +1 ); //calculate face value randomly
     }
 

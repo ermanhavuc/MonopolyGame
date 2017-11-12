@@ -6,7 +6,7 @@ public class LuxuryTaxSquare extends Square {
     }
 
     @Override
-    public void Operation(Player player) {
+    public void Operation(Player player, Board board) {
 
         player.setMoney(-75);
         System.out.println("Paid 75$ to Bank.. ");
