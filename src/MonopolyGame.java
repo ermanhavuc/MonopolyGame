@@ -33,7 +33,14 @@ public class MonopolyGame {
 
         while (numOfPlayers < 2 || numOfPlayers > 8) {
             System.out.print("Enter number of Players betweeen 2 and 8: ");
-            numOfPlayers = new Scanner(System.in).nextInt();
+
+            Scanner scanner = new Scanner(System.in);
+
+            if(scanner.hasNextInt()){
+                numOfPlayers = scanner.nextInt();
+            }else {
+                System.out.println("Please enter a number!");
+            }
         }
 
         Player[] players = new Player[numOfPlayers];
