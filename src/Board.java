@@ -71,7 +71,7 @@ public class Board {
 
         int rollTotal=0;
 
-        for(int j=0; j<dice.length; j++){
+        for(int j=0; j < dice.length; j++){
 
             dice[j].roll();
             rollTotal += dice[j].getFaceValue();

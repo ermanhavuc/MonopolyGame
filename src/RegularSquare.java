@@ -8,6 +8,5 @@ public class RegularSquare extends Square { // this class for normal squares Squ
     @Override
     public void Operation(Player player, Board board) {
 
-        System.out.println("Waiting next turn...");
     }
 }
