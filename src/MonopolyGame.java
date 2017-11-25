@@ -1,8 +1,9 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MonopolyGame {
 
-    private static final int RoundsNumber = 15;  //number of rounds
+    //private static final int RoundsNumber = 15;  //number of rounds
 
     private Board board = new Board();
 
@@ -12,22 +13,25 @@ public class MonopolyGame {
         playGame(buildPlayers());  //game starts
     }
 
-    private void playGame(Player[] players) {   // oyunda sadece 1 oyuncu kalana kadar oyun devam edecek iflas eden kirayı ya da vergiyi ödeyemeyen oyundan
-                                                //çıkar
-        for (int i = 0; i < RoundsNumber; i++) {
-            System.out.println("----Round "+(i+1)+"----\n");
-
-            for (Player player : players) { //take turns in the round
-                if (!player.getBankruptcyStat()) {
-                    playTurn(player);
+    private void playGame(ArrayList<Player> players) {   // oyunda sadece 1 oyuncu kalana kadar oyun devam edecek iflas eden kirayı ya da vergiyi ödeyemeyen oyundan
+        while (players.size() > 1) {
+            for (int i=players.size()-1;i>=0;i--) { //take turns in the round
+                if (!players.get(i).getBankruptcyStat()) {
+                    playTurn(players.get(i));
+                } else {
+                    players.remove(players.get(i));
+                    for(int i=0;i<players.get(i).getOwnerSquares().size();i++){
+                        players.get(i).getOwnerSquares().get(i).setOwnable(true); // Arraylist üzerinde her bir squarein satınalınabilir yapıcam
+                    }
+                    //players.get(i)
                 }
+
             }
         }
-
         System.out.println("Game finished !");
+        System.out.println("Winner is" + "" + players.get(0).getName());
     }
-
-    private Player[] buildPlayers() {
+    private  ArrayList<Player> buildPlayers() { //
 
         int numOfPlayers = 0;
 
@@ -43,7 +47,7 @@ public class MonopolyGame {
             }
         }
 
-        Player[] players = new Player[numOfPlayers];
+       ArrayList<Player> players = new ArrayList<>();    // return de burda
 
         System.out.println("\nEnter initial money of Players: ");
         Scanner scanner = new Scanner(System.in);
@@ -53,8 +57,8 @@ public class MonopolyGame {
 
         for (int i = 0; i < numOfPlayers; i++) {
             String nameOfPlayer = new Scanner(System.in).nextLine();
-            players[i] = new Player(nameOfPlayer, new Piece(board.getSquare(0),i));
-            players[i].setMoney(money);
+            players.add(new Player(nameOfPlayer, new Piece(board.getSquare(0),i))); //
+            players.get(i).setMoney(money); //
         }
 
         System.out.println("\nGame Starting...\n\n");
@@ -66,7 +70,7 @@ public class MonopolyGame {
 
         if (player.getOldLocation().getIndex() - player.getLocation().getIndex() > 0 &&
                 player.getLocation().getIndex() != 30) {
-            player.setMoney(200);
+            player.setMoney(10);
             System.out.println("Player passed Go Square, 200$ received from Bank");
         }
     }

@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Player {   //player object
 
     private String name;
@@ -5,6 +7,7 @@ public class Player {   //player object
     private int money ;  // kullanıcı konsoldan başlangıç miktarını belirleyecek
     private boolean inJail = false;
     private int failJailRolls = 0;
+    private ArrayList<Square> ownerSquares=new ArrayList<>();
 
     public Player(String name, Piece piece) { //player constructor
         this.name = name;
@@ -59,5 +62,12 @@ public class Player {   //player object
     public boolean getBankruptcyStat() {
 
         return money <= 0;
+    }
+
+    public ArrayList<Square> getOwnerSquares(){
+        return ownerSquares;
+    }
+    public void setOwnerSquares(Square location){
+        ownerSquares.add(location);
     }
 }
