@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public class IncomeTaxSquare extends Square {
 
     public IncomeTaxSquare(String name, int index) {
@@ -6,10 +8,10 @@ public class IncomeTaxSquare extends Square {
     }
 
     @Override
-    public void Operation(Player player, Board board) {
+    public void Operation(Player player, Board board) throws IOException {
 
         int tax = player.getMoney()/10;
         player.setMoney(-tax);
-        System.out.println("Paid "+ tax +"$ to Bank");
+        Print.out("Paid "+ tax +"$ to Bank",true);
     }
 }

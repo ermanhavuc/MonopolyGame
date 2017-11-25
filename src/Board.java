@@ -1,10 +1,16 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Scanner;
+
 public class Board {
 
     private static final int SIZE = 40;
     private Square squares[] = new Square[SIZE];
     private Die dice[] = new Die[2];
+    private int [] lotsArray = new int[22*3];
 
-    public Board() {
+    public Board() throws IOException {
 
         buildSquares(); //Build squares
         buildDice(); //Build Dices
@@ -21,9 +27,15 @@ public class Board {
         return squares[index];
     }
 
-    private void buildSquares() {
+    private void buildSquares() throws IOException {
 
-        for(int i=0;i<SIZE;i++) {
+        Print.out("Please enter path of lots file: ",false);
+        //readLotsFile(new Scanner(System.in).nextLine());
+        readLotsFile("Monopoly-Lots.csv");
+
+        int lotsFileCounter = 0;
+
+        for(int i=0; i<SIZE ;i++) {
 
             switch (i) {
 
@@ -76,7 +88,12 @@ public class Board {
                     break;
 
                 default:
-                    squares[i] = new RegularSquare("Regular Square", i);
+                    if(i == lotsArray[lotsFileCounter]){
+                        squares[i] = new LotSquare("Square"+lotsArray[lotsFileCounter], lotsArray[lotsFileCounter++], lotsArray[lotsFileCounter++], lotsArray[lotsFileCounter++]);
+                    }else{
+                        squares[i] = new RegularSquare("Regular Square",i);
+                    }
+
                     break;
             }
         }
@@ -89,9 +106,9 @@ public class Board {
         }
     }
 
-    public int[] rollDice() {
+    public int[] rollDice() throws IOException {
 
-        System.out.println("Rolling dice...");
+        Print.out("Rolling dice...", true);
 
         int rollTotal=0;
 
@@ -100,10 +117,10 @@ public class Board {
             dice[j].roll();
             rollTotal += dice[j].getFaceValue();
             int diceNumber = j + 1;
-            System.out.println("Dice " + diceNumber + ": " + dice[j].getFaceValue());
+            Print.out("Dice " + diceNumber + ": " + dice[j].getFaceValue(),true);
         }
 
-        System.out.println("Total: " + rollTotal);
+        Print.out("Total: " + rollTotal,true);
 
         int returnValues[] = new int[3];
         returnValues[0] = rollTotal;
@@ -111,5 +128,23 @@ public class Board {
         returnValues[2] = dice[1].getFaceValue();
 
         return returnValues;
+    }
+
+    private void readLotsFile(String path) throws FileNotFoundException {
+
+        String[] tempStringArray;
+        int i = 0;
+        Scanner fileScanner = new Scanner(new File(path));
+        String input = fileScanner.nextLine();
+
+        while(fileScanner.hasNextLine()){
+            input = fileScanner.nextLine();
+            tempStringArray = input.split(";");
+
+            for(int j = 0; j < 3; j++){
+                lotsArray[i+j] = Integer.parseInt(tempStringArray[j]);
+            }
+            i += 3;
+        }
     }
 }

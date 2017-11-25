@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public class Utility extends Square {
     private int price = 150;
     private Player owner ;
@@ -6,25 +8,25 @@ public class Utility extends Square {
         super(name, index);
     }
 
-    public void Operation(Player player, Board board) {
+    public void Operation(Player player, Board board) throws IOException {
         if (getOwner()==null) {
             Die rolling = new Die();
             int roll = rolling.getFaceValue();
             if (roll > 4 && ( player.getMoney() >= getPrice())) {
-                System.out.println(roll);
+                Print.out(roll+"",true);
                 setOwner(player);
                 player.setMoney(-getPrice());
-                 System.out.println(getName()+"'s Owner is "+getOwner().getName()+ player.getMoney());
+                Print.out(getName()+"'s Owner is "+getOwner().getName()+ player.getMoney(),true);
             }
         } else if ((player == getOwner())) { // Square sahibi ile landon player aynı kişi
-                System.out.println(getOwner().getName() +"is owner do nothing");
+                Print.out(getOwner().getName() +"is owner do nothing",true);
             } else {
                 Die rolling = new Die();
                 int roll = rolling.getFaceValue();
                 int rent = 10 * roll;
                 player.setMoney(-rent);
                 getOwner().setMoney(rent);
-                System.out.println(rent + " rent is paid to " + getOwner().getPiece().getName());
+                Print.out(rent + " rent is paid to " + getOwner().getPiece().getName(),true);
             }
 
     }
@@ -37,8 +39,9 @@ public class Utility extends Square {
         return owner;
     }
 
-    private void setOwner(Player p) {
-        owner = p;
+    private void setOwner(Player player) {
+
+        owner = player;
     }
 
 

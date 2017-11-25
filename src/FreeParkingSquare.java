@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public class FreeParkingSquare extends Square {
 
     public FreeParkingSquare(String name, int index){
@@ -5,7 +7,8 @@ public class FreeParkingSquare extends Square {
     }
 
     @Override
-    public void Operation(Player player, Board board) {
-        System.out.println("Waiting next turn...");
+    public void Operation(Player player, Board board) throws IOException {
+
+        Print.out("Waiting next turn...",true);
     }
 }

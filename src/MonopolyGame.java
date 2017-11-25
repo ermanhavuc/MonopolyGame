@@ -1,3 +1,5 @@
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class MonopolyGame {
@@ -6,16 +8,16 @@ public class MonopolyGame {
 
     private Board board = new Board();
 
-    public MonopolyGame() {
+    public MonopolyGame() throws IOException {
 
-        System.out.println("Welcome to Monopoly Simulation !\n");
+        Print.out("Welcome to Monopoly Simulation !\n",true);
         playGame(buildPlayers());  //game starts
     }
 
-    private void playGame(Player[] players) {   // oyunda sadece 1 oyuncu kalana kadar oyun devam edecek iflas eden kirayı ya da vergiyi ödeyemeyen oyundan
+    private void playGame(Player[] players) throws IOException {   // oyunda sadece 1 oyuncu kalana kadar oyun devam edecek iflas eden kirayı ya da vergiyi ödeyemeyen oyundan
                                                 //çıkar
         for (int i = 0; i < RoundsNumber; i++) {
-            System.out.println("----Round "+(i+1)+"----\n");
+            Print.out("----Round "+(i+1)+"----\n",true);
 
             for (Player player : players) { //take turns in the round
                 if (!player.getBankruptcyStat()) {
@@ -24,32 +26,32 @@ public class MonopolyGame {
             }
         }
 
-        System.out.println("Game finished !");
+        Print.out("Game finished !",true);
     }
 
-    private Player[] buildPlayers() {
+    private Player[] buildPlayers() throws IOException {
 
         int numOfPlayers = 0;
 
         while (numOfPlayers < 2 || numOfPlayers > 8) {
-            System.out.print("Enter number of Players betweeen 2 and 8: ");
+            Print.out("Enter number of Players betweeen 2 and 8: ",false);
 
             Scanner scanner = new Scanner(System.in);
 
             if(scanner.hasNextInt()){
                 numOfPlayers = scanner.nextInt();
             }else {
-                System.out.println("Please enter a number!");
+                Print.out("Please enter a number!",true);
             }
         }
 
         Player[] players = new Player[numOfPlayers];
 
-        System.out.println("\nEnter initial money of Players: ");
+        Print.out("\nEnter initial money of Players: ",true);
         Scanner scanner = new Scanner(System.in);
         int money=scanner.nextInt();
 
-        System.out.println("\nEnter names of Players: ");
+        Print.out("\nEnter names of Players: ",true);
 
         for (int i = 0; i < numOfPlayers; i++) {
             String nameOfPlayer = new Scanner(System.in).nextLine();
@@ -57,25 +59,25 @@ public class MonopolyGame {
             players[i].setMoney(money);
         }
 
-        System.out.println("\nGame Starting...\n\n");
+        Print.out("\nGame Starting...\n\n",true);
 
         return players;
     }
 
-    private void controlGoSquare(Player player) {
+    private void controlGoSquare(Player player) throws IOException {
 
         if (player.getOldLocation().getIndex() - player.getLocation().getIndex() > 0 &&
-                player.getLocation().getIndex() != 30) {
+                player.getLocation().getIndex() != 30 && player.getLocation().getIndex() != 0) {
             player.setMoney(200);
-            System.out.println("Player passed Go Square, 200$ received from Bank");
+            Print.out("Player passed Go Square, 200$ received from Bank",true);
         }
     }
 
-    private void playTurn(Player player) {
+    private void playTurn(Player player) throws IOException {
 
-        System.out.println("- " + player.getName() + " (" + player.getMoney() + "$) is taking turn:\n");
-        System.out.println(player.getPiece().getName() + " is at " + player.getLocation().getIndex() + ": " +
-                player.getLocation().getName() + "\n");
+        Print.out("- " + player.getName() + " (" + player.getMoney() + "$) is taking turn:\n",true);
+        Print.out(player.getPiece().getName() + " is at " + player.getLocation().getIndex() + ": " +
+                player.getLocation().getName() + "\n",true);
 
         if (!player.isInJail()) {
             int[] dice;
@@ -90,22 +92,22 @@ public class MonopolyGame {
 
                     controlGoSquare(player);
 
-                    System.out.println("\n" + player.getPiece().getName() + "'s new location is " +
-                            player.getLocation().getIndex() + ": " + player.getLocation().getName());
+                    Print.out("\n" + player.getPiece().getName() + "'s new location is " +
+                            player.getLocation().getIndex() + ": " + player.getLocation().getName(),true);
 
                     player.getLocation().Operation(player, board);
 
                     if(dice[1] == dice[2]){
                         doubleCount++;
-                        System.out.println("\n");
+                        Print.out("\n",true);
                     }
 
                 }else {
                     player.setLocation(board.getSquare(10));
                     player.setInJail(true);
-                    System.out.println("Player " + player.getName() + " is now in jail !");
-                    System.out.println("\n" + player.getPiece().getName() + "'s new location is " +
-                            player.getLocation().getIndex()+": " + player.getLocation().getName());
+                    Print.out("Player " + player.getName() + " is now in jail !",true);
+                    Print.out("\n" + player.getPiece().getName() + "'s new location is " +
+                            player.getLocation().getIndex()+": " + player.getLocation().getName(),true);
                     break;
                 }
             } while (dice[1] == dice[2] && !player.isInJail());
@@ -114,6 +116,6 @@ public class MonopolyGame {
             player.getLocation().Operation(player, board);
         }
 
-        System.out.println("\n\n");
+        Print.out("\n\n",true);
     }
 }

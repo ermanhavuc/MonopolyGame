@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public class GoSquare extends Square {
 
     public GoSquare(String name, int index) {
@@ -6,9 +8,9 @@ public class GoSquare extends Square {
     }
 
     @Override
-    public void Operation(Player player, Board board) {
+    public void Operation(Player player, Board board) throws IOException {
 
         player.setMoney(200);
-        System.out.println("200$ received from Bank");
+        Print.out("200$ received from Bank",true);
     }
 }
