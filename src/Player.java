@@ -2,7 +2,7 @@ public class Player {   //player object
 
     private String name;
     private Piece piece;
-    private int money = 200;
+    private int money ;  // kullanıcı konsoldan başlangıç miktarını belirleyecek
     private boolean inJail = false;
     private int failJailRolls = 0;
 

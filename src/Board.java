@@ -31,23 +31,47 @@ public class Board {
                     squares[i] = new GoSquare("Go Square",i);
                     break;
 
-                case 4:
+                case 5:
                     squares[i] = new IncomeTaxSquare("Income Tax Square",i);
                     break;
 
-                case 10:
+                case 6:
+                    squares[i] = new Railroads("RailRoad1",i);
+                    break;
+
+                case 11:
                     squares[i] = new JailSquare("Jail Square",i);
+                    break;
+
+                case 16:
+                    squares[i] = new Railroads("Railroad2",i);
+                    break;
+
+                case 13:
+                    squares[i] = new Utility("Electric Utility Square",i);
                     break;
 
                 case 20:
                     squares[i] = new FreeParkingSquare("Free Parking Square",i);
                     break;
 
-                case 30:
+                case 26:
+                    squares[i] = new Railroads("Railroad3",i);
+                    break;
+
+                case 29:
+                    squares[i] = new Utility("Water Utility",i);
+                    break;
+
+                case 31:
                     squares[i] = new GoToJailSquare("Go to Jail Square",i);
                     break;
 
-                case 38:
+                case 36:
+                    squares[i] = new Railroads("Railroad4",i);
+                    break;
+
+                case 39:
                     squares[i] = new LuxuryTaxSquare("Luxury Tax Square",i);
                     break;
 
