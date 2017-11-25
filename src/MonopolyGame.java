@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class MonopolyGame {
 
-    private static final int RoundsNumber = 5;  //number of rounds
+    private static final int RoundsNumber = 15;  //number of rounds
 
     private Board board = new Board();
 
@@ -12,8 +12,8 @@ public class MonopolyGame {
         playGame(buildPlayers());  //game starts
     }
 
-    private void playGame(Player[] players) {
-
+    private void playGame(Player[] players) {   // oyunda sadece 1 oyuncu kalana kadar oyun devam edecek iflas eden kirayı ya da vergiyi ödeyemeyen oyundan
+                                                //çıkar
         for (int i = 0; i < RoundsNumber; i++) {
             System.out.println("----Round "+(i+1)+"----\n");
 
@@ -45,11 +45,16 @@ public class MonopolyGame {
 
         Player[] players = new Player[numOfPlayers];
 
+        System.out.println("\nEnter initial money of Players: ");
+        Scanner scanner = new Scanner(System.in);
+        int money=scanner.nextInt();
+
         System.out.println("\nEnter names of Players: ");
 
         for (int i = 0; i < numOfPlayers; i++) {
             String nameOfPlayer = new Scanner(System.in).nextLine();
             players[i] = new Player(nameOfPlayer, new Piece(board.getSquare(0),i));
+            players[i].setMoney(money);
         }
 
         System.out.println("\nGame Starting...\n\n");
