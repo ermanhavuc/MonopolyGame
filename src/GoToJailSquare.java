@@ -10,7 +10,7 @@ public class GoToJailSquare extends Square{
     @Override
     public void Operation(Player player, Board board) throws IOException {
 
-        player.setLocation(board.getSquare(10));
+        player.setLocation(board.getSquare(10)); // if player lands on this Square ,player must go to Jail
         player.setInJail(true);
         Print.out("Player " + player.getName() + " is now in jail !",true);
         Print.out("\n" + player.getPiece().getName() + "'s new location is " +

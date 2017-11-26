@@ -19,8 +19,8 @@ public class MonopolyGame {
         playGame(buildPlayers());  //game starts
     }
 
-    private void playGame(ArrayList<Player> players) throws IOException {   // oyunda sadece 1 oyuncu kalana kadar oyun devam edecek iflas eden kirayı ya da vergiyi ödeyemeyen oyundan
-                                                //çıkar
+    private void playGame(ArrayList<Player> players) throws IOException {   //Game go on untill 1 player stay in the game
+
         while (true){
             Print.out("----Round "+(RoundsNumber++)+"----\n",true);
 
@@ -28,11 +28,12 @@ public class MonopolyGame {
                 Player player = iterator.next();
                 playTurn(player);
 
-                if (player.getBankruptcyStat()) {
+                if (player.getBankruptcyStat()) { // if player is bankrupted, player must leave from the game
                     Print.out(player.getName()+" WENT BANKRUPT!",true);
                     iterator.remove();
                 }
-
+                // Game go on till 1 player stays
+                // Last player in the game is WINNER
                 if (players.size() == 1){
                     Print.out("--- WINNER: " + players.get(0).getName() + " ---",true);
                     break;
@@ -52,7 +53,7 @@ public class MonopolyGame {
         int numOfPlayers = 0;
 
         while (numOfPlayers < 2 || numOfPlayers > 8) {
-            Print.out("Enter number of Players betweeen 2 and 8: ",false);
+            Print.out("Enter number of Players betweeen 2 and 8: ",false); // Enter number of players
 
             Scanner scanner = new Scanner(System.in);
 
@@ -66,12 +67,12 @@ public class MonopolyGame {
 
         ArrayList<Player> players = new ArrayList<>();
 
-        Print.out("\nEnter initial money of Players: ",false);
+        Print.out("\nEnter initial money of Players: ",false); // Initial money value of players at the starting of the game
         Scanner scanner = new Scanner(System.in);
         int money = scanner.nextInt();
         out.println(money+"");
 
-        Print.out("\nEnter names of Players: ",true);
+        Print.out("\nEnter names of Players: ",true); // Enter name of players
 
         for (int i = 0; i < numOfPlayers; i++) {
             String nameOfPlayer = new Scanner(System.in).nextLine();
@@ -85,11 +86,11 @@ public class MonopolyGame {
         return players;
     }
 
-    private void controlGoSquare(Player player) throws IOException {
+    private void controlGoSquare(Player player) throws IOException { // If player goes from GoSquare at turn ,player will receive money from Bank
 
         if (player.getOldLocation().getIndex() - player.getLocation().getIndex() > 0 &&
                 player.getLocation().getIndex() != 30 && player.getLocation().getIndex() != 0) {
-            player.setMoney(200);
+            player.setMoney(20);
             Print.out("Player passed Go Square, 200$ received from Bank",true);
         }
     }

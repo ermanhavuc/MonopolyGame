@@ -16,7 +16,7 @@ public class Board {
         buildDice(); //Build Dices
     }
 
-    public Square calculateSquare(Square start, int distance) {
+    public Square calculateSquare(Square start, int distance) { // calculate new place on board after rolling
 
         int endIndex = (start.getIndex()+distance)%Board.SIZE;
         return squares[endIndex];
@@ -28,18 +28,14 @@ public class Board {
     }
 
     private void buildSquares() throws IOException {
-
-        Print.out("Please enter path of lots file: \n",false);
-        Print.out("",true);
-        String file;// = new Scanner(System.in).nextLine();
-        //readLotsFile(file);
-        file = "Monopoly-Lots.csv";
+        String file;
+        file = "Monopoly-Lots.csv"; // file holds data about lots square position ,price,rent
         out.println(file);
-        readLotsFile(file);
+        readLotsFile(file); // read from file
 
         int lotsFileCounter = 0;
 
-        for(int i=0; i<SIZE ;i++) {
+        for(int i=0; i<SIZE ;i++) { // build squares with name and index
 
             switch (i) {
 
@@ -103,14 +99,14 @@ public class Board {
         }
     }
 
-    private  void buildDice() {
+    private  void buildDice() { // create two dice object
 
         for (int i = 0; i < 2; i++) {
             dice[i] = new Die();
         }
     }
 
-    public int[] rollDice() throws IOException {
+    public int[] rollDice() throws IOException {  // rolling dice and get facevalues
 
         Print.out("Rolling dice...", true);
 
@@ -134,8 +130,7 @@ public class Board {
         return returnValues;
     }
 
-    private void readLotsFile(String path) throws FileNotFoundException {
-
+    private void readLotsFile(String path) throws FileNotFoundException {  // read lots file and creation of lots Squares
         String[] tempStringArray;
         int i = 0;
         Scanner fileScanner = new Scanner(new File(path));
@@ -150,5 +145,6 @@ public class Board {
             }
             i += 3;
         }
+
     }
 }

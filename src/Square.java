@@ -1,6 +1,6 @@
 import java.io.IOException;
 
-public abstract class Square {
+public abstract class Square { // Square objects on the board
 
     private String name;
     private int index;

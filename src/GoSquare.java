@@ -1,6 +1,6 @@
 import java.io.IOException;
 
-public class GoSquare extends Square {
+public class GoSquare extends Square { // Start square of monopoly game
 
     public GoSquare(String name, int index) {
 
@@ -8,9 +8,9 @@ public class GoSquare extends Square {
     }
 
     @Override
-    public void Operation(Player player, Board board) throws IOException {
+    public void Operation(Player player, Board board) throws IOException { // Operation of this square
 
-        player.setMoney(200);
+        player.setMoney(200);            // if player lands on GoSquare player will receive money from bank
         Print.out("200$ received from Bank",true);
     }
 }

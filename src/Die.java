@@ -1,7 +1,7 @@
 
 public class Die {
 
-    private static final int MAX = 6;
+    private static final int MAX = 6; // dice facevalue number
     private int faceValue;
 
     public Die() {
@@ -14,7 +14,7 @@ public class Die {
         faceValue=(int) ( (Math.random()*MAX) +1 );
     }
 
-    public int getFaceValue() {
+    public int getFaceValue() { // get facevalue of dice object
 
         return faceValue;
     }

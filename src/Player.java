@@ -1,13 +1,12 @@
-import java.util.ArrayList;
 
 public class Player {   //player object
 
     private String name;
     private Piece piece;
-    private int money ;  // kullanıcı konsoldan başlangıç miktarını belirleyecek
+    private int money ;  // money value will be entered from console by user
     private boolean inJail = false;
     private int failJailRolls = 0;
-    private ArrayList<Square> ownerSquares=new ArrayList<>();
+
 
     public Player(String name, Piece piece) { //player constructor
         this.name = name;
@@ -59,15 +58,13 @@ public class Player {   //player object
         this.failJailRolls = failJailRolls;
     }
 
-    public boolean getBankruptcyStat() {
+    public boolean getBankruptcyStat() { //Control of player bankrupt condition
 
         return money <= 0;
     }
+    public int setBankruptcyStat(){ // Set player bankrupted for don't have enough money to pay a rent or tax
 
-    public ArrayList<Square> getOwnerSquares(){
-        return ownerSquares;
+        return money=-1;
     }
-    public void setOwnerSquares(Square location){
-        ownerSquares.add(location);
-    }
+
 }
