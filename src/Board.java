@@ -28,8 +28,9 @@ public class Board {
     }
 
     private void buildSquares() throws IOException {
+        Print.out("Please enter path of input file: ", false);
         String file;
-        file = "Monopoly-Lots.csv"; // file holds data about lots square position ,price,rent
+        file = new Scanner(System.in).nextLine(); // file holds data about lots square position ,price,rent
         out.println(file);
         readLotsFile(file); // read from file
 
