@@ -1,0 +1,47 @@
+Please enter path of lots file: 
+
+
+Monopoly-Lots.csv
+Welcome to Monopoly Simulation !
+
+Enter number of Players betweeen 2 and 8: 
+2
+
+Enter initial money of Players: 
+0
+
+Enter names of Players: 
+q
+w
+
+Game Starting...
+
+
+----Round 0----
+
+- q (0$) is taking turn:
+
+Dog is at 0: Go Square
+
+Rolling dice...
+Dice 1: 6
+Dice 2: 6
+Total: 12
+
+Dog's new location is 12: Electric Utility Square
+q has no enough money for buying this lot.
+
+
+Rolling dice...
+Dice 1: 2
+Dice 2: 6
+Total: 8
+
+Dog's new location is 20: Free Parking Square
+Waiting next turn...
+
+
+
+q WENT BANKRUPT!
+--- WINNER: w ---
+Game finished !

@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public abstract class Square {
 
     private String name;
@@ -20,5 +22,5 @@ public abstract class Square {
         return index;
     }
 
-    public abstract void Operation(Player player, Board board);
+    public abstract void Operation(Player player, Board board) throws IOException;
 }
