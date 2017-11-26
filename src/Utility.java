@@ -9,7 +9,7 @@ public class Utility extends Square {
     }
 
     public void Operation(Player player, Board board) throws IOException {
-        if (getOwner()==null) {
+        if (getOwner() == null) {
             Die rolling = new Die();
             int roll = rolling.getFaceValue();
             if (roll > 4 && ( player.getMoney() >= getPrice())) {

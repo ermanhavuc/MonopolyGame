@@ -17,7 +17,7 @@ public class Railroads extends Square {
                 Print.out(roll+"",true);
                 player.setMoney(-getPrice());
                 setOwner(player);
-                Print.out("owner is "+getOwner().getName(),true);
+                Print.out(getName()+"'s Owner is "+getOwner().getName()+ player.getMoney(),true);
             }
         }else if (player == getOwner() ) {
             Print.out(getOwner().getName() + "is owner do nothing",true);
@@ -27,7 +27,7 @@ public class Railroads extends Square {
             int rent = 5 * roll + 25;
             player.setMoney(-rent);
             getOwner().setMoney(rent);
-            Print.out(rent + " rent is paid.",true);
+            Print.out(rent + " rent is paid to " + getOwner().getPiece().getName(),true);
         }
     }
 

@@ -40,6 +40,7 @@ public class MonopolyGame {
 
             if(scanner.hasNextInt()){
                 numOfPlayers = scanner.nextInt();
+                Print.out(numOfPlayers+"",true);
             }else {
                 Print.out("Please enter a number!",true);
             }
@@ -49,12 +50,14 @@ public class MonopolyGame {
 
         Print.out("\nEnter initial money of Players: ",true);
         Scanner scanner = new Scanner(System.in);
-        int money=scanner.nextInt();
+        int money = scanner.nextInt();
+        Print.out(money+"",true);
 
         Print.out("\nEnter names of Players: ",true);
 
         for (int i = 0; i < numOfPlayers; i++) {
             String nameOfPlayer = new Scanner(System.in).nextLine();
+            Print.out(nameOfPlayer,true);
             players[i] = new Player(nameOfPlayer, new Piece(board.getSquare(0),i));
             players[i].setMoney(money);
         }

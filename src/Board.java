@@ -43,23 +43,23 @@ public class Board {
                     squares[i] = new GoSquare("Go Square",i);
                     break;
 
-                case 5:
+                case 4:
                     squares[i] = new IncomeTaxSquare("Income Tax Square",i);
                     break;
 
-                case 6:
+                case 5:
                     squares[i] = new Railroads("RailRoad1",i);
                     break;
 
-                case 11:
+                case 10:
                     squares[i] = new JailSquare("Jail Square",i);
                     break;
 
-                case 16:
+                case 15:
                     squares[i] = new Railroads("Railroad2",i);
                     break;
 
-                case 13:
+                case 12:
                     squares[i] = new Utility("Electric Utility Square",i);
                     break;
 
@@ -67,29 +67,29 @@ public class Board {
                     squares[i] = new FreeParkingSquare("Free Parking Square",i);
                     break;
 
-                case 26:
+                case 25:
                     squares[i] = new Railroads("Railroad3",i);
                     break;
 
-                case 29:
+                case 28:
                     squares[i] = new Utility("Water Utility",i);
                     break;
 
-                case 31:
+                case 30:
                     squares[i] = new GoToJailSquare("Go to Jail Square",i);
                     break;
 
-                case 36:
+                case 35:
                     squares[i] = new Railroads("Railroad4",i);
                     break;
 
-                case 39:
+                case 38:
                     squares[i] = new LuxuryTaxSquare("Luxury Tax Square",i);
                     break;
 
                 default:
                     if(i == lotsArray[lotsFileCounter]){
-                        squares[i] = new LotSquare("Square"+lotsArray[lotsFileCounter], lotsArray[lotsFileCounter++], lotsArray[lotsFileCounter++], lotsArray[lotsFileCounter++]);
+                        squares[i] = new LotSquare("Square"+lotsArray[lotsFileCounter]+1, lotsArray[lotsFileCounter++], lotsArray[lotsFileCounter++], lotsArray[lotsFileCounter++]);
                     }else{
                         squares[i] = new RegularSquare("Regular Square",i);
                     }

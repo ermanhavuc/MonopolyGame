@@ -9,11 +9,10 @@ public class Print {
         PrintWriter out = new PrintWriter(new FileWriter("output.txt", true), true);
         if (line){
             System.out.println(message);
-            out.println(message);
         }else {
             System.out.print(message);
-            out.print(message);
         }
 
+        out.println(message);
     }
 }
