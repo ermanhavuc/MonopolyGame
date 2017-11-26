@@ -1,6 +1,4 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 public class Board {
@@ -9,6 +7,8 @@ public class Board {
     private Square squares[] = new Square[SIZE];
     private Die dice[] = new Die[2];
     private int [] lotsArray = new int[22*3];
+
+    PrintWriter out = new PrintWriter(new FileWriter("output.txt", true), true);
 
     public Board() throws IOException {
 
@@ -29,9 +29,13 @@ public class Board {
 
     private void buildSquares() throws IOException {
 
-        Print.out("Please enter path of lots file: ",false);
-        //readLotsFile(new Scanner(System.in).nextLine());
-        readLotsFile("Monopoly-Lots.csv");
+        Print.out("Please enter path of lots file: \n",false);
+        Print.out("",true);
+        String file;// = new Scanner(System.in).nextLine();
+        //readLotsFile(file);
+        file = "Monopoly-Lots.csv";
+        out.println(file);
+        readLotsFile(file);
 
         int lotsFileCounter = 0;
 

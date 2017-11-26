@@ -1,10 +1,15 @@
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class MonopolyGame {
 
     private static int RoundsNumber = 0;  //number of rounds
+
+    PrintWriter out = new PrintWriter(new FileWriter("output.txt", true), true);
 
     private Board board = new Board();
 
@@ -19,12 +24,13 @@ public class MonopolyGame {
         while (true){
             Print.out("----Round "+(RoundsNumber++)+"----\n",true);
 
-            for (Player player : players) { //take turns in the round
+            for (Iterator<Player> iterator = players.iterator(); iterator.hasNext();) { //take turns in the round
+                Player player = iterator.next();
                 playTurn(player);
 
                 if (player.getBankruptcyStat()) {
                     Print.out(player.getName()+" WENT BANKRUPT!",true);
-                    players.remove(player);
+                    iterator.remove();
                 }
 
                 if (players.size() == 1){
@@ -52,7 +58,7 @@ public class MonopolyGame {
 
             if(scanner.hasNextInt()){
                 numOfPlayers = scanner.nextInt();
-                Print.out(numOfPlayers+"",true);
+                out.println(numOfPlayers+"");
             }else {
                 Print.out("Please enter a number!",true);
             }
@@ -60,16 +66,16 @@ public class MonopolyGame {
 
         ArrayList<Player> players = new ArrayList<>();
 
-        Print.out("\nEnter initial money of Players: ",true);
+        Print.out("\nEnter initial money of Players: ",false);
         Scanner scanner = new Scanner(System.in);
         int money = scanner.nextInt();
-        Print.out(money+"",true);
+        out.println(money+"");
 
         Print.out("\nEnter names of Players: ",true);
 
         for (int i = 0; i < numOfPlayers; i++) {
             String nameOfPlayer = new Scanner(System.in).nextLine();
-            Print.out(nameOfPlayer,true);
+            out.println(nameOfPlayer);
             players.add(new Player(nameOfPlayer, new Piece(board.getSquare(0),i)));
             players.get(i).setMoney(money);
         }

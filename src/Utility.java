@@ -17,6 +17,8 @@ public class Utility extends Square {
                 setOwner(player);
                 player.setMoney(-getPrice());
                 Print.out(getName()+"'s Owner is "+getOwner().getName()+ player.getMoney(),true);
+            }else if (!(player.getMoney() >= getPrice())){
+                Print.out(player.getName()+" has no enough money for buying this lot.",true);
             }
         } else if ((player == getOwner())) { // Square sahibi ile landon player aynı kişi
                 Print.out(getOwner().getName() +"is owner do nothing",true);

@@ -24,6 +24,8 @@ public class LotSquare extends Square {
                 player.setMoney(-getPrice());
                 setOwner(player);
                 Print.out(getName()+"'s Owner is "+getOwner().getName()+ player.getMoney(),true);
+            }else if (!(player.getMoney() >= getPrice())){
+                Print.out(player.getName()+" has no enough money for buying this lot.",true);
             }
         }else if (player == getOwner()) {
             Print.out(getOwner().getName() + "is owner do nothing",false);

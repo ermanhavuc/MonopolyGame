@@ -7,6 +7,7 @@ public class Main {
 
         PrintWriter writer = new PrintWriter("output.txt");
         writer.print("");
+
         new MonopolyGame();  //if number of player is acceptable value play game
     }
 
