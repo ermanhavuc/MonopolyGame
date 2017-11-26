@@ -1,10 +1,10 @@
-import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MonopolyGame {
 
-    private static final int RoundsNumber = 15;  //number of rounds
+    private static int RoundsNumber = 0;  //number of rounds
 
     private Board board = new Board();
 
@@ -14,22 +14,34 @@ public class MonopolyGame {
         playGame(buildPlayers());  //game starts
     }
 
-    private void playGame(Player[] players) throws IOException {   // oyunda sadece 1 oyuncu kalana kadar oyun devam edecek iflas eden kirayı ya da vergiyi ödeyemeyen oyundan
+    private void playGame(ArrayList<Player> players) throws IOException {   // oyunda sadece 1 oyuncu kalana kadar oyun devam edecek iflas eden kirayı ya da vergiyi ödeyemeyen oyundan
                                                 //çıkar
-        for (int i = 0; i < RoundsNumber; i++) {
-            Print.out("----Round "+(i+1)+"----\n",true);
+        while (true){
+            Print.out("----Round "+(RoundsNumber++)+"----\n",true);
 
             for (Player player : players) { //take turns in the round
-                if (!player.getBankruptcyStat()) {
-                    playTurn(player);
+                playTurn(player);
+
+                if (player.getBankruptcyStat()) {
+                    Print.out(player.getName()+" WENT BANKRUPT!",true);
+                    players.remove(player);
                 }
+
+                if (players.size() == 1){
+                    Print.out("--- WINNER: " + players.get(0).getName() + " ---",true);
+                    break;
+                }
+            }
+
+            if (players.size() == 1){
+                break;
             }
         }
 
         Print.out("Game finished !",true);
     }
 
-    private Player[] buildPlayers() throws IOException {
+    private ArrayList<Player> buildPlayers() throws IOException {
 
         int numOfPlayers = 0;
 
@@ -46,7 +58,7 @@ public class MonopolyGame {
             }
         }
 
-        Player[] players = new Player[numOfPlayers];
+        ArrayList<Player> players = new ArrayList<>();
 
         Print.out("\nEnter initial money of Players: ",true);
         Scanner scanner = new Scanner(System.in);
@@ -58,8 +70,8 @@ public class MonopolyGame {
         for (int i = 0; i < numOfPlayers; i++) {
             String nameOfPlayer = new Scanner(System.in).nextLine();
             Print.out(nameOfPlayer,true);
-            players[i] = new Player(nameOfPlayer, new Piece(board.getSquare(0),i));
-            players[i].setMoney(money);
+            players.add(new Player(nameOfPlayer, new Piece(board.getSquare(0),i)));
+            players.get(i).setMoney(money);
         }
 
         Print.out("\nGame Starting...\n\n",true);
