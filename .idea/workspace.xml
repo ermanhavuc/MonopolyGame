@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8967cab4-eebd-41bb-9d61-51d9b3e88a4a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/MonopolyGame.class" afterPath="$PROJECT_DIR$/out/production/Game/MonopolyGame.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MonopolyGame.java" afterPath="$PROJECT_DIR$/src/MonopolyGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Player.java" afterPath="$PROJECT_DIR$/src/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Railroads.java" afterPath="$PROJECT_DIR$/src/Railroads.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utility.java" afterPath="$PROJECT_DIR$/src/Utility.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,8 +38,8 @@
       <file leaf-file-name="MonopolyGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MonopolyGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="144" lean-forward="false" selection-start-line="23" selection-start-column="144" selection-end-line="23" selection-end-column="144" />
+            <state relative-caret-position="425">
+              <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -54,7 +50,7 @@
       <file leaf-file-name="Utility.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Utility.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-266">
+            <state relative-caret-position="238">
               <caret line="16" column="68" lean-forward="false" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
               <folding>
                 <element signature="e#1443#1444#0" expanded="true" />
@@ -76,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/src/Railroads.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="19" selection-end-column="15" />
+              <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="19" selection-end-column="15" />
               <folding>
                 <element signature="e#1408#1409#0" expanded="true" />
                 <element signature="e#1440#1441#0" expanded="true" />
@@ -90,7 +86,7 @@
       <file leaf-file-name="JailSquare.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JailSquare.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-371">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -101,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/src/Player.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="61" lean-forward="true" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
+              <caret line="9" column="61" lean-forward="false" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
               <folding>
                 <element signature="e#1412#1413#0" expanded="true" />
                 <element signature="e#1447#1448#0" expanded="true" />
@@ -220,6 +216,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -237,9 +236,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -393,7 +389,8 @@
       <workItem from="1511557663174" duration="149000" />
       <workItem from="1511612800884" duration="1391000" />
       <workItem from="1511629938012" duration="1403000" />
-      <workItem from="1511634141911" duration="11474000" />
+      <workItem from="1511634141911" duration="12422000" />
+      <workItem from="1511683384107" duration="452000" />
     </task>
     <task id="LOCAL-00001" summary="added some comments and fixed some bugs">
       <created>1509012444292</created>
@@ -542,26 +539,31 @@
       <option name="project" value="LOCAL" />
       <updated>1511630023680</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Ownable conditions and End of game conditions added">
+      <created>1511651845282</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1511651845282</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62220000" />
+    <option name="totallyTimeSpent" value="63620000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24814422" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24722663" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4801902" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4801902" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -571,13 +573,14 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13470681" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13470681" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -630,7 +633,8 @@
     <MESSAGE value="Added GoToJail Square" />
     <MESSAGE value="Added Jail Square and its attributes" />
     <MESSAGE value="Bankruptcy added and fixed some Jail issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bankruptcy added and fixed some Jail issues" />
+    <MESSAGE value="Ownable conditions and End of game conditions added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ownable conditions and End of game conditions added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1029,7 +1033,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1037,7 +1040,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1045,7 +1047,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
           <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1053,7 +1054,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
           <caret line="230" column="0" lean-forward="false" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1061,7 +1061,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
           <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1069,7 +1068,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
           <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1077,7 +1075,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
           <caret line="82" column="24" lean-forward="false" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1091,7 +1088,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JailSquare.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-371">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1108,7 +1105,7 @@
     <entry file="file://$PROJECT_DIR$/src/Railroads.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="19" selection-end-column="15" />
+          <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="19" selection-end-column="15" />
           <folding>
             <element signature="e#1408#1409#0" expanded="true" />
             <element signature="e#1440#1441#0" expanded="true" />
@@ -1120,7 +1117,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Utility.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-266">
+        <state relative-caret-position="238">
           <caret line="16" column="68" lean-forward="false" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
           <folding>
             <element signature="e#1443#1444#0" expanded="true" />
@@ -1140,7 +1137,7 @@
     <entry file="file://$PROJECT_DIR$/src/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="61" lean-forward="true" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
+          <caret line="9" column="61" lean-forward="false" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
           <folding>
             <element signature="e#1412#1413#0" expanded="true" />
             <element signature="e#1447#1448#0" expanded="true" />
@@ -1152,8 +1149,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MonopolyGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="144" lean-forward="false" selection-start-line="23" selection-start-column="144" selection-end-line="23" selection-end-column="144" />
+        <state relative-caret-position="425">
+          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
