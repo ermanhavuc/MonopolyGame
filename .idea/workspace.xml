@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8967cab4-eebd-41bb-9d61-51d9b3e88a4a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/RegularSquare.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Board.class" afterPath="$PROJECT_DIR$/out/production/Game/Board.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Die.class" afterPath="$PROJECT_DIR$/out/production/Game/Die.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Main.class" afterPath="$PROJECT_DIR$/out/production/Game/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/MonopolyGame.class" afterPath="$PROJECT_DIR$/out/production/Game/MonopolyGame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Piece.class" afterPath="$PROJECT_DIR$/out/production/Game/Piece.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Player.class" afterPath="$PROJECT_DIR$/out/production/Game/Player.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Game/Square.class" afterPath="$PROJECT_DIR$/out/production/Game/Square.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Board.java" afterPath="$PROJECT_DIR$/src/Board.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FreeParkingSquare.java" afterPath="$PROJECT_DIR$/src/FreeParkingSquare.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GoSquare.java" afterPath="$PROJECT_DIR$/src/GoSquare.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GoToJailSquare.java" afterPath="$PROJECT_DIR$/src/GoToJailSquare.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/IncomeTaxSquare.java" afterPath="$PROJECT_DIR$/src/IncomeTaxSquare.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JailSquare.java" afterPath="$PROJECT_DIR$/src/JailSquare.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LuxuryTaxSquare.java" afterPath="$PROJECT_DIR$/src/LuxuryTaxSquare.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MonopolyGame.java" afterPath="$PROJECT_DIR$/src/MonopolyGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Railroads.java" afterPath="$PROJECT_DIR$/src/Railroads.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Square.java" afterPath="$PROJECT_DIR$/src/Square.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utility.java" afterPath="$PROJECT_DIR$/src/Utility.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -539,7 +519,7 @@
       <workItem from="1511368302103" duration="4926000" />
       <workItem from="1511557663174" duration="149000" />
       <workItem from="1511612800884" duration="1391000" />
-      <workItem from="1511629938012" duration="17563000" />
+      <workItem from="1511629938012" duration="18303000" />
     </task>
     <task id="LOCAL-00001" summary="added some comments and fixed some bugs">
       <created>1509012444292</created>
@@ -695,15 +675,21 @@
       <option name="project" value="LOCAL" />
       <updated>1511631380168</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Added Lots Squares and their Operations">
+      <created>1511651888844</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1511651888844</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66906000" />
+    <option name="totallyTimeSpent" value="67646000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -713,7 +699,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24814422" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29586425" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29586425" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -785,7 +771,8 @@
     <MESSAGE value="Added Jail Square and its attributes" />
     <MESSAGE value="Bankruptcy added and fixed some Jail issues" />
     <MESSAGE value="Fixed Utility getOwner() error" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Utility getOwner() error" />
+    <MESSAGE value="Added Lots Squares and their Operations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Lots Squares and their Operations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
