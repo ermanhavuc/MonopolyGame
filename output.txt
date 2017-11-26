@@ -1,0 +1,507 @@
+Rolling dice...
+Dice 1: 6
+Dice 2: 2
+Total: 8
+Rolling dice...
+Dice 1: 4
+Dice 2: 2
+Total: 6
+Rolling dice...
+Dice 1: 2
+Dice 2: 2
+Total: 4
+1
+Rolling dice...
+Dice 1: 3
+Dice 2: 5
+Total: 8
+Rolling dice...
+Dice 1: 1
+Dice 2: 6
+Total: 7
+Rolling dice...
+Dice 1: 5
+Dice 2: 5
+Total: 10
+Rolling dice...
+Dice 1: 2
+Dice 2: 3
+Total: 5
+Rolling dice...
+Dice 1: 2
+Dice 2: 6
+Total: 8
+Rolling dice...
+Dice 1: 4
+Dice 2: 4
+Total: 8
+Rolling dice...
+Dice 1: 2
+Dice 2: 6
+Total: 8
+Rolling dice...
+Dice 1: 4
+Dice 2: 4
+Total: 8
+Rolling dice...
+Dice 1: 1
+Dice 2: 2
+Total: 3
+Rolling dice...
+Dice 1: 3
+Dice 2: 3
+Total: 6
+3
+Rolling dice...
+Dice 1: 4
+Dice 2: 4
+Total: 8
+Rolling dice...
+Dice 1: 1
+Dice 2: 3
+Total: 4
+Rolling dice...
+Dice 1: 1
+Dice 2: 6
+Total: 7
+Rolling dice...
+Dice 1: 3
+Dice 2: 4
+Total: 7
+Rolling dice...
+Dice 1: 3
+Dice 2: 2
+Total: 5
+Rolling dice...
+Dice 1: 5
+Dice 2: 1
+Total: 6
+5
+Square7's Owner is asd323
+Rolling dice...
+Dice 1: 2
+Dice 2: 5
+Total: 7
+2
+Rolling dice...
+Dice 1: 5
+Dice 2: 5
+Total: 10
+Rolling dice...
+Dice 1: 1
+Dice 2: 5
+Total: 6
+Rolling dice...
+Dice 1: 3
+Dice 2: 1
+Total: 4
+Rolling dice...
+Dice 1: 2
+Dice 2: 6
+Total: 8
+4
+Rolling dice...
+Dice 1: 5
+Dice 2: 1
+Total: 6
+Rolling dice...
+Dice 1: 3
+Dice 2: 2
+Total: 5
+Rolling dice...
+Dice 1: 5
+Dice 2: 4
+Total: 9
+Welcome to Monopoly Simulation !
+
+
+Enter initial money of Players: 
+
+Enter names of Players: 
+
+Game Starting...
+
+
+----Round 1----
+
+- asd (23$) is taking turn:
+
+Dog is at 0: Go Square
+
+Rolling dice...
+Dice 1: 5
+Dice 2: 4
+Total: 9
+
+Dog's new location is 9: Square9
+3
+
+
+
+- asd (23$) is taking turn:
+
+RaceCar is at 0: Go Square
+
+Rolling dice...
+Dice 1: 2
+Dice 2: 6
+Total: 8
+
+RaceCar's new location is 8: Regular Square
+
+
+
+----Round 2----
+
+- asd (23$) is taking turn:
+
+Dog is at 9: Square9
+
+Rolling dice...
+Dice 1: 3
+Dice 2: 1
+Total: 4
+
+Dog's new location is 13: Electric Utility Square
+
+
+
+- asd (23$) is taking turn:
+
+RaceCar is at 8: Regular Square
+
+Rolling dice...
+Dice 1: 1
+Dice 2: 6
+Total: 7
+
+RaceCar's new location is 15: Square15
+3
+
+
+
+----Round 3----
+
+- asd (23$) is taking turn:
+
+Dog is at 13: Electric Utility Square
+
+Rolling dice...
+Dice 1: 6
+Dice 2: 1
+Total: 7
+
+Dog's new location is 20: Free Parking Square
+Waiting next turn...
+
+
+
+- asd (23$) is taking turn:
+
+RaceCar is at 15: Square15
+
+Rolling dice...
+Dice 1: 1
+Dice 2: 6
+Total: 7
+
+RaceCar's new location is 22: Regular Square
+
+
+
+----Round 4----
+
+- asd (23$) is taking turn:
+
+Dog is at 20: Free Parking Square
+
+Rolling dice...
+Dice 1: 1
+Dice 2: 1
+Total: 2
+
+Dog's new location is 22: Regular Square
+
+
+Rolling dice...
+Dice 1: 2
+Dice 2: 4
+Total: 6
+
+Dog's new location is 28: Regular Square
+
+
+
+- asd (23$) is taking turn:
+
+RaceCar is at 22: Regular Square
+
+Rolling dice...
+Dice 1: 2
+Dice 2: 1
+Total: 3
+
+RaceCar's new location is 25: Regular Square
+
+
+
+----Round 5----
+
+- asd (23$) is taking turn:
+
+Dog is at 28: Regular Square
+
+Rolling dice...
+Dice 1: 2
+Dice 2: 1
+Total: 3
+
+Dog's new location is 31: Go to Jail Square
+Player asd is now in jail !
+
+Dog's new location is 10: Square10
+
+
+
+- asd (23$) is taking turn:
+
+RaceCar is at 25: Regular Square
+
+Rolling dice...
+Dice 1: 1
+Dice 2: 1
+Total: 2
+
+RaceCar's new location is 27: Regular Square
+
+
+Rolling dice...
+Dice 1: 1
+Dice 2: 4
+Total: 5
+
+RaceCar's new location is 32: Regular Square
+
+
+
+----Round 6----
+
+- asd (23$) is taking turn:
+
+Dog is at 10: Square10
+
+3
+
+
+
+- asd (23$) is taking turn:
+
+RaceCar is at 32: Regular Square
+
+Rolling dice...
+Dice 1: 1
+Dice 2: 5
+Total: 6
+
+RaceCar's new location is 38: Regular Square
+
+
+
+----Round 7----
+
+- asd (23$) is taking turn:
+
+Dog is at 10: Square10
+
+2
+
+
+
+- asd (23$) is taking turn:
+
+RaceCar is at 38: Regular Square
+
+Rolling dice...
+Dice 1: 2
+Dice 2: 2
+Total: 4
+Player passed Go Square, 200$ received from Bank
+
+RaceCar's new location is 2: Square2
+3
+
+
+Rolling dice...
+Dice 1: 6
+Dice 2: 6
+Total: 12
+
+RaceCar's new location is 14: Square14
+6
+Square14's Owner is asd83
+
+
+Rolling dice...
+Dice 1: 3
+Dice 2: 3
+Total: 6
+
+RaceCar's new location is 20: Free Parking Square
+Waiting next turn...
+
+
+Rolling dice...
+Dice 1: 6
+Dice 2: 1
+Total: 7
+Player asd is now in jail !
+
+RaceCar's new location is 10: Square10
+
+
+
+----Round 8----
+
+- asd (23$) is taking turn:
+
+Dog is at 10: Square10
+
+5
+
+
+
+- asd (83$) is taking turn:
+
+RaceCar is at 10: Square10
+
+1
+
+
+
+----Round 9----
+
+- asd (23$) is taking turn:
+
+Dog is at 10: Square10
+
+1
+
+
+
+- asd (83$) is taking turn:
+
+RaceCar is at 10: Square10
+
+5
+
+
+
+----Round 10----
+
+- asd (23$) is taking turn:
+
+Dog is at 10: Square10
+
+5
+
+
+
+- asd (83$) is taking turn:
+
+RaceCar is at 10: Square10
+
+5
+
+
+
+----Round 11----
+
+- asd (23$) is taking turn:
+
+Dog is at 10: Square10
+
+5
+
+
+
+- asd (83$) is taking turn:
+
+RaceCar is at 10: Square10
+
+6
+
+
+
+----Round 12----
+
+- asd (23$) is taking turn:
+
+Dog is at 10: Square10
+
+4
+
+
+
+- asd (83$) is taking turn:
+
+RaceCar is at 10: Square10
+
+2
+
+
+
+----Round 13----
+
+- asd (23$) is taking turn:
+
+Dog is at 10: Square10
+
+5
+
+
+
+- asd (83$) is taking turn:
+
+RaceCar is at 10: Square10
+
+4
+
+
+
+----Round 14----
+
+- asd (23$) is taking turn:
+
+Dog is at 10: Square10
+
+3
+
+
+
+- asd (83$) is taking turn:
+
+RaceCar is at 10: Square10
+
+4
+
+
+
+----Round 15----
+
+- asd (23$) is taking turn:
+
+Dog is at 10: Square10
+
+3
+
+
+
+- asd (83$) is taking turn:
+
+RaceCar is at 10: Square10
+
+4
+
+
+
+Game finished !
