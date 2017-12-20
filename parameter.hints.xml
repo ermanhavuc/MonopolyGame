@@ -1,0 +1,9 @@
+<application>
+  <component name="ParameterNameHintsSettings">
+    <blacklists>
+      <blacklist language="Java">
+        <added pattern="java.io.Writer.write(str)" />
+      </blacklist>
+    </blacklists>
+  </component>
+</application>
